@@ -10,26 +10,34 @@ The workflow covers **data preprocessing, feature selection, supervised & unsupe
 
 ## 📂 Project Structure
 Heart_Disease_Project/
-│── data/
-│   ├── heart_disease.csv
-│── notebooks/
-│   ├── 01_data_preprocessing.ipynb
-│   ├── 02_pca_analysis.ipynb
-│   ├── 03_feature_selection.ipynb 
-│   ├── 04_supervised_learning.ipynb 
-│   ├── 05_unsupervised_learning.ipynb 
-│   ├── 06_hyperparameter_tuning.ipynb 
-│── models/ 
-│   ├── final_model.pkl 
-│── ui/ 
-│   ├── app.py (Streamlit UI) 
-│── deployment/ 
-│   ├── ngrok_setup.txt 
-│── results/ 
-│   ├── evaluation_metrics.txt 
-│── README.md 
-│── requirements.txt 
-│── .gitignore 
+|
+├── data/
+|   ├── heart+disease                         # Original dataset
+|   ├── 01_cleaned_data.csv                   # Cleaned dataset (Step 1)
+|   ├── 02_data_pca.csv                       # pca dataset (Step 2)
+|   ├── heart_selected_features.csv           # Reduced dataset after feature selection (Step 3)
+|
+├── models/
+|   └── final_model.pkl              # Best trained model (Step 7)
+|
+├── notebooks/
+|   ├── step1_data_preprocessing.ipynb
+|   ├── step2_pca_analysis.ipynb
+|   ├── step3_feature_selection.ipynb
+|   ├── step4_supervised_learning.ipynb
+|   ├── step5_unsupervised_learning.ipynb
+|   └── step6_hyperparameter_tuning.ipynb
+|
+├── app/
+|   └── app.py                       # Streamlit app for prediction (Step 9)
+|
+├── results/
+|   ├── evaluation_metrics.txt       # Model performance report
+|   └── figures/                     # Plots & visualizations
+|
+|── README.md
+└── Attachment.pdf
+
 
 ---
 
@@ -39,7 +47,7 @@ Heart_Disease_Project/
 - Load Cleveland dataset.  
 - Handle missing values (`?` → NaN → imputation).  
 - Encode categorical variables.  
-- Save cleaned dataset as `cleaned_heart.csv`.
+- Save cleaned dataset as `01_cleaned_data.csv`.
 
 ---
 
@@ -49,7 +57,7 @@ Heart_Disease_Project/
 - Plot:
   - Cumulative Variance Plot.  
   - Scatter Plot (PC1 vs PC2).  
-- Selected **11 PCs** explaining ~95% of variance.
+- Selected **12 PCs** explaining ~95% of variance.
 
 ---
 
