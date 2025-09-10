@@ -9,12 +9,12 @@ The workflow covers **data preprocessing, feature selection, supervised & unsupe
 ---
 
 ## 📂 Project Structure
-Heart_Disease_Project/ 
-│── data/ 
-│   ├── heart_disease.csv 
-│── notebooks/ 
-│   ├── 01_data_preprocessing.ipynb 
-│   ├── 02_pca_analysis.ipynb 
+Heart_Disease_Project/
+│── data/
+│   ├── heart_disease.csv
+│── notebooks/
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_pca_analysis.ipynb
 │   ├── 03_feature_selection.ipynb 
 │   ├── 04_supervised_learning.ipynb 
 │   ├── 05_unsupervised_learning.ipynb 
