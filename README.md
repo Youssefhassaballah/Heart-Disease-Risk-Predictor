@@ -36,8 +36,9 @@ Heart_Disease_Project/
 │   ├── evaluation_metrics.txt               # Model performance report
 │   └── figures/                             # Plots & visualizations
 │
-├── README.md
-└── Attachment.pdf
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
