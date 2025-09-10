@@ -1,4 +1,4 @@
-readme_content = """# ❤️ Heart Disease Prediction Project
+# ❤️ Heart Disease Prediction Project
 
 ## 📌 Project Overview
 This project implements a **Heart Disease Prediction System** using **Machine Learning** techniques.  
@@ -9,35 +9,36 @@ The workflow covers **data preprocessing, feature selection, supervised & unsupe
 ---
 
 ## 📂 Project Structure
+```plaintext
 Heart_Disease_Project/
-|
+│
 ├── data/
-|   ├── heart+disease                         # Original dataset
-|   ├── 01_cleaned_data.csv                   # Cleaned dataset (Step 1)
-|   ├── 02_data_pca.csv                       # pca dataset (Step 2)
-|   ├── heart_selected_features.csv           # Reduced dataset after feature selection (Step 3)
-|
+│   ├── heart+disease/                       # Original dataset
+│   ├── 01_cleaned_data.csv                  # Cleaned dataset (Step 1)
+│   ├── 02_data_pca.csv                      # PCA dataset (Step 2)
+│   └── heart_selected_features.csv          # Reduced dataset after feature selection (Step 3)
+│
 ├── models/
-|   └── final_model.pkl              # Best trained model (Step 7)
-|
+│   └── final_model.pkl                      # Best trained model (Step 7)
+│
 ├── notebooks/
-|   ├── step1_data_preprocessing.ipynb
-|   ├── step2_pca_analysis.ipynb
-|   ├── step3_feature_selection.ipynb
-|   ├── step4_supervised_learning.ipynb
-|   ├── step5_unsupervised_learning.ipynb
-|   └── step6_hyperparameter_tuning.ipynb
-|
+│   ├── step1_data_preprocessing.ipynb
+│   ├── step2_pca_analysis.ipynb
+│   ├── step3_feature_selection.ipynb
+│   ├── step4_supervised_learning.ipynb
+│   ├── step5_unsupervised_learning.ipynb
+│   └── step6_hyperparameter_tuning.ipynb
+│
 ├── app/
-|   └── app.py                       # Streamlit app for prediction (Step 9)
-|
+│   └── app.py                               # Streamlit app for prediction (Step 9)
+│
 ├── results/
-|   ├── evaluation_metrics.txt       # Model performance report
-|   └── figures/                     # Plots & visualizations
-|
-|── README.md
+│   ├── evaluation_metrics.txt               # Model performance report
+│   └── figures/                             # Plots & visualizations
+│
+├── README.md
 └── Attachment.pdf
-
+```
 
 ---
 
@@ -67,8 +68,8 @@ Techniques used:
 2. **Recursive Feature Elimination (RFE)**  
 3. **Chi-Square Test**
 
-- Final selected features:
-thalach, slope, ca, oldpeak, thal, cp, exang, sex
+- Final selected features:  
+  `thalach, slope, ca, oldpeak, thal, cp, exang, sex`  
 - Saved reduced dataset as `03_data_selected_features.csv`.
 
 ---
@@ -88,11 +89,11 @@ Models trained:
 
 ### **Step 5 – Unsupervised Learning (Clustering)**
 1. **K-Means Clustering**  
- - Elbow Method → optimal K = 2  
- - Cluster scatter plots  
+   - Elbow Method → optimal K = 2  
+   - Cluster scatter plots  
 2. **Hierarchical Clustering**  
- - Dendrogram  
- - Agglomerative clustering  
+   - Dendrogram  
+   - Agglomerative clustering  
 
 ✔ Compared cluster assignments with actual disease labels.
 
@@ -104,26 +105,27 @@ Models trained:
 
 Best performance on Test Set:  
 - **Random Forest (tuned):**  
-- Accuracy = 90%  
-- Recall = 92%  
-- ROC-AUC = 0.95 ✅ (Best Model)
+  - Accuracy = 90%  
+  - Recall = 92%  
+  - ROC-AUC = 0.95 ✅ (Best Model)
 
 ---
 
 ### **Step 7 – Model Export**
 - Saved best performing model (`RandomForestClassifier`) as:  
-models/final_model.pkl
+  `models/final_model.pkl`
 
 ---
 
 ### **Step 8 – Streamlit App**
 - Developed `app.py` with **Streamlit UI**.  
-- Allows user input for:
-thalach, slope, ca, oldpeak, thal, cp, exang, sex
-- Outputs:
-- Predicted Class (High Risk / Low Risk)  
-- Probability Score  
+- Allows user input for:  
+  `thalach, slope, ca, oldpeak, thal, cp, exang, sex`  
+- Outputs:  
+  - Predicted Class (High Risk / Low Risk)  
+  - Probability Score  
 
 Run locally:
 ```bash
 streamlit run app/app.py
+```
